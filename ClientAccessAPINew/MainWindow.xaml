@@ -1,0 +1,29 @@
+﻿<Window x:Class="ClientAccessDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Margin="10,10,0,10" FontSize="26" FontWeight="Bold">Historian Client Access Tag Demo</TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Margin="10,10,10,10" FontSize="14" FontWeight="Bold">Server:</TextBlock>
+            <TextBox Grid.Column="1" Margin="0,10,10,10" FontSize="14" Width="200" Name="serverName"></TextBox>
+            <Button Grid.Column="2" Margin="10,10,10,10" Content="Browse Tags" Height="23" HorizontalAlignment="Left" Name="browseTagsButton" VerticalAlignment="Top" Width="75" Click="browseTags_Click" />
+        </Grid>
+        <TextBlock Grid.Row="2" Margin="10,10,0,10" FontSize="20" FontWeight="Bold">Tag List:</TextBlock>
+        <DataGrid Grid.Row="3" Margin="10,0,10,10" HorizontalAlignment="Stretch" Name="tagGrid" VerticalAlignment="Top" Width="Auto" />
+    </Grid>
+</Window>
